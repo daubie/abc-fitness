@@ -20,7 +20,10 @@
       </nav>
     </header>
     <main>
-      <button>View Shopping Cart</button>
+      <h2>Our Products</h2>
+      <button class="view-cart">View Shopping Cart</button>
+      <button class="clear-cart">Clear Cart</button>
+      <button class="process-order">Process Order</button>
       <table>
         <tr>
           <th>Product</th>
@@ -32,7 +35,11 @@
             <img src="assets/images/Client2_TeeShirt.png" alt="Tee Shirt" />
           </td>
           <td>Comfortable workout tee with logo.</td>
-          <td><button>Add to Cart</button></td>
+          <td>
+            <button class="add-to-cart" data-item="Tee Shirt">
+              Add to Cart
+            </button>
+          </td>
         </tr>
         <tr>
           <td>
@@ -42,16 +49,33 @@
             />
           </td>
           <td>Stay hydrated with this sleek bottle.</td>
-          <td><button>Add to Cart</button></td>
+          <td>
+            <button class="add-to-cart" data-item="Water Bottle">
+              Add to Cart
+            </button>
+          </td>
         </tr>
         <tr>
           <td>
             <img src="assets/images/Client2_YogaMat.png" alt="Yoga Mat" />
           </td>
           <td>Non-slip mat for your yoga sessions.</td>
-          <td><button>Add to Cart</button></td>
+          <td>
+            <button class="add-to-cart" data-item="Yoga Mat">
+              Add to Cart
+            </button>
+          </td>
         </tr>
       </table>
+      <div id="cart-modal" class="modal">
+        <div class="modal-content">
+          <h2>Shopping Cart</h2>
+          <ul id="cart-items"></ul>
+          <button class="clear-cart">Clear Cart</button>
+          <button class="process-order">Process Order</button>
+          <button class="close-modal">Close</button>
+        </div>
+      </div>
     </main>
     <footer>
       <section>
@@ -74,5 +98,6 @@
         </nav>
       </section>
     </footer>
+    <script src="assets/scripts/script.js"></script>
   </body>
 </html>
